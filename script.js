@@ -155,10 +155,16 @@ function getPasswordOptions() {
   return options;
 }
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 // TODO Function for getting a random element from an array
 function getRandom(arr) {
   // use math random to get random index
+  var randNum = getRandomInt(arr.length);
   // return the item on that index from arr
+  return arr[randNum];
 }
 
 // Function to generate password with user input
