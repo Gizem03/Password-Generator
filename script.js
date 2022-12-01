@@ -147,12 +147,19 @@ function getPasswordOptions() {
   // return the options
   var options = {
     lengthOfPassword: length,
+    special: specialCharacters,
+    numeric: numericCharacters,
+    lowercase: lowerCasedCharacters,
+    uppercase: upperCasedCharacters,
   };
   return options;
 }
 
-// Function for getting a random element from an array
-function getRandom(arr) {}
+// TODO Function for getting a random element from an array
+function getRandom(arr) {
+  // use math random to get random index
+  // return the item on that index from arr
+}
 
 // Function to generate password with user input
 function generatePassword() {
@@ -160,13 +167,28 @@ function generatePassword() {
   var options = getPasswordOptions();
   console.log(options);
 
-  // depending on the options, generate the bigger array using the arrays above
+  // TODO depending on the options, generate the bigger array using the arrays above
+  var allOptions = [];
+  if (options.special === true) {
+    allOptions = allOptions.concat(specialCharacters);
+  }
+  if (options.numeric === true) {
+    allOptions = allOptions.concat(numericCharacters);
+  }
+  if (options.lowercase === true) {
+    allOptions = allOptions.concat(lowerCasedCharacters);
+  }
+  if (options.uppercase === true) {
+    allOptions = allOptions.concat(upperCasedCharacters);
+  }
+
+  console.log(allOptions);
 
   // assume password length is n
   // for loop i = 0 until i is n
   // pick a random letter, add it to the password string
 
-  //grab random chars from the arrays above, if the user chose to select from that array
+  // TODO grab random chars from the arrays above, if the user chose to select from that array
   //how do we generate a string based on a provided length?
   // return the generated password
 
