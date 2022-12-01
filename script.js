@@ -188,8 +188,10 @@ function generatePassword() {
     allOptions = allOptions.concat(upperCasedCharacters);
   }
 
-  console.log(allOptions);
-
+  var password = "";
+  for (var i = 0; i < options.lengthOfPassword; i++) {
+    password = password + getRandom(allOptions);
+  }
   // assume password length is n
   // for loop i = 0 until i is n
   // pick a random letter, add it to the password string
@@ -198,7 +200,7 @@ function generatePassword() {
   //how do we generate a string based on a provided length?
   // return the generated password
 
-  return "hebelehubele";
+  return password;
 }
 
 // Get references to the #generate element
