@@ -159,7 +159,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-// TODO Function for getting a random element from an array
+// Function for getting a random element from an array
 function getRandom(arr) {
   // use math random to get random index
   var randNum = getRandomInt(arr.length);
@@ -173,7 +173,7 @@ function generatePassword() {
   var options = getPasswordOptions();
   console.log(options);
 
-  // TODO depending on the options, generate the bigger array using the arrays above
+  // depending on the options, generate the bigger array using the arrays above
   var allOptions = [];
   if (options.special === true) {
     allOptions = allOptions.concat(specialCharacters);
@@ -188,17 +188,14 @@ function generatePassword() {
     allOptions = allOptions.concat(upperCasedCharacters);
   }
 
-  var password = "";
-  for (var i = 0; i < options.lengthOfPassword; i++) {
-    password = password + getRandom(allOptions);
-  }
   // assume password length is n
   // for loop i = 0 until i is n
   // pick a random letter, add it to the password string
 
-  // TODO grab random chars from the arrays above, if the user chose to select from that array
-  //how do we generate a string based on a provided length?
-  // return the generated password
+  var password = "";
+  for (var i = 0; i < options.lengthOfPassword; i++) {
+    password = password + getRandom(allOptions);
+  }
 
   return password;
 }
