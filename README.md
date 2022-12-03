@@ -1,4 +1,4 @@
-# Console-Finances
+# Password-Generator
 
 ## Table of Contents
 
